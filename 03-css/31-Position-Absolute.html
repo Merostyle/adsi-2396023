@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Absolute</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+      div.parentbox,
+      div.parentbox div 
+      {
+          border: 2px solid #666;
+          padding: 10px;
+      } 
+      div.parentbox 
+      {
+          margin: 0 auto;
+          width: 360px;
+          position: relative;
+      }
+      
+      div.parentbox div 
+      {     
+          background-color: #fffa66;
+          display: inline-block;
+          font-size: 4rem;
+          text-align: center;
+          line-height: 4.5rem;
+          height: 76px;
+          margin: 8px;
+          width: 76px;
+      }
+      div.parentbox div.Box4 
+      {
+          width: 318px;
+      }
+    
+      div.parentbox div.Box2{
+          background-color: #078cda99;
+          position:     absolute;
+          top: 50px;
+          left: 220px;
+      }
+    
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html">⬅</a>Position Absolute</h1>
+        </header>
+        <section>
+            <div class="parentbox">
+                <div class="Box1">🥒</div>
+                <div class="Box2">🍌</div>
+                <div class="Box3">🍆</div>
+                <div class="Box4">🌶</div>
+            </div>
+            
+         
+
+        </section>
+    </main>
+</body>
+</html>

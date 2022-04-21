@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Float</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+      div.parentbox,
+      div.parentbox div 
+      {
+          border: 2px solid #666;
+          padding: 10px;
+      } 
+      div.parentbox 
+      {
+          margin: 0 auto;
+          width: 360px;
+          
+      }
+      
+      div.parentbox div 
+      {     
+          background-color: #fffa66;
+          font-size: 4rem;
+          text-align: center;
+          line-height: 4.5rem;
+          height: 76px;
+          margin: 8px;
+          width: 76px;
+      }
+      div.parentbox div.Box1 {
+          background-color: rgb(253, 0, 97);
+          float: right;
+      }
+      
+    
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html">⬅</a>Position Float</h1>
+        </header>
+        <section>
+            <div class="parentbox">
+                <div class="Box1">🍎</div>
+                <div class="Box2">🍓</div>
+                <div class="Box3">🍒</div>
+                
+            </div>
+            
+         
+
+        </section>
+    </main>
+</body>
+</html>

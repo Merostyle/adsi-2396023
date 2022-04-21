@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OverFlow</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        article {
+            border: 2px solid #666;
+            width: 240px;
+            margin: 0px auto 80px auto;
+            height: 200px;
+            
+        }
+        article h2 {
+            text-align: center;
+        }
+        article p {
+            text-align: justify;
+            padding: 10px;
+        }
+        article.art1 {
+            font-size: 14.8px;
+        
+            overflow: visible;
+        }
+        article.art2 {
+            overflow: hidden;
+        }
+        article.art3 {
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html">⬅</a>OverFlow</h1>
+        </header>
+        <section>
+            <article class="art1">
+                <h2>OverFlow: Visible</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aliquam iusto adipisci, corporis non ipsam esse iure sunt ullam voluptas dolorum nihil laudantium, maiores fugit quod! Pariatur ea nulla placeat?
+                </p>
+            </article>
+            <article class="art2">
+                <h2>OverFlow: Hidden</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aliquam iusto adipisci, corporis non ipsam esse iure sunt ullam voluptas dolorum nihil laudantium, maiores fugit quod! Pariatur ea nulla placeat?
+                </p>
+            </article>
+            <article class="art3">
+                <h2>OverFlow: Scroll</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aliquam iusto adipisci, corporis non ipsam esse iure sunt ullam voluptas dolorum nihil laudantium, maiores fugit quod! Pariatur ea nulla placeat?
+                </p>
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>
