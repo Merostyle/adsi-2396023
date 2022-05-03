@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        ol.ol1{
+            list-style: upper-roman;
+        }
+        ol.ol2 {
+            list-style: circle; list-style-position: square; 
+        }
+        /*    */
+        ul.ol1 {
+            list-style: georgian;list-style-position: square; 
+         }
+        ul.ol2 {
+            list-style: square;
+        }
+        ul.uli {
+            list-style: url(/03-css/images/icon.png);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html">⬅</a>Lists</h1>
+        </header>
+        <section>
+            <h2>
+                Ordered
+            </h2>
+            <ul class="ol1">
+            <li>Write Code</li>
+            <li>Compile Code</li>
+            <li>Fix Errors</li>
+            <li>Compile Again</li>
+            </ul>
+            <!--- -->
+            <ol class="ol1">
+            <li>Write Code</li>
+            <li>Compile Code</li>
+            <li>Fix Errors</li>
+            <li>Compile Again</li>
+            </ol>
+            <!--- -->
+             <h2>
+                Unordered
+            </h2>
+            <ol class="ol2">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+
+            </ol>
+            <!--- -->
+            <ul class="ol2">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+
+            </ul>
+            <!--- -->
+            <h2>List With Image</h2>
+            <ul class="uli">
+                <li>Liverpool</li>
+                <li>Real Madrid</li>
+                <li>Manchester United</li>
+                <li>Juventus</li>
+            </ul>
+            
+
+        </section>
+    </main>
+</body>
+</html>
