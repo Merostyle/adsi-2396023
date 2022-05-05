@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHALLENGE (SPRITES)</title>
+    <!--<link rel="stylesheet" href="css/master.css"> -->
+
+    <style>
+        body {
+            background-color: #17a053;
+            border: 9px solid #fff;
+
+
+        }
+
+        main div.logo {
+            background: url(images/spriteweb.png);
+            background-position: -20px -1023px;
+            width: 170px;
+            height: 160px;
+            margin: auto;
+        }
+
+
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 80%;
+
+        }
+
+        header {
+            margin: 2rem;
+        }
+
+        header nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header nav a:link,
+        header nav a:visited {
+            background-color: #37393899;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            transition: all 0.2s ease-out;
+            border-bottom: 6px solid #fff;
+        }
+
+        header nav a:hover {
+            background-color: rgb(0, 0, 0);
+            border-bottom: 6px solid rgb(225, 207, 0);
+
+
+
+        }
+
+        header nav a.active {
+            background-color: #00881d;
+            color: #fff;
+
+        }
+
+        section {
+            margin: 25px;
+            display: flex;
+            border: 1.5rem solid #096b3a99;
+            gap: 1rem;
+            background-color: #37393899;
+
+
+        }
+
+        main section.images div {
+            background: url(images/spriteweb.png);
+            width: 125px;
+            height: 1px;
+            padding: 105px;
+            background-position: -465px -1px;
+            display: inline-block;
+        }
+
+        main section.images div h3 {
+            background-color: #ffffff35;
+            padding: 1rem 7.9rem;
+            text-decoration: none;
+            padding-top: 15px;
+            padding-right: 192px;
+            margin: -100px;
+            text-align: justify;
+            margin-top: -100px;
+        }
+
+        main section.images div h3:hover {
+            background-color: #ffffffbd;
+            cursor: pointer;
+        }
+
+        main section.text {
+            margin: 25px;
+            display: flex;
+            border: 0.5rem solid #096b3a99;
+            gap: 2rem;
+            background-color: #37393899;
+            padding: 12px;
+            width: 1050px;
+            height: 900px;
+
+
+
+        }
+
+        main section.text div h2 {
+            background: url(/03-css/images/spriteweb.png);
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <div class="logo"></div>
+        <header>
+            <nav>
+                <a href=""> INICIO</a>
+                <a href="">NOSOTROS</a>
+                <a href="">PORTAFOLIO</a>
+                <a href="">SERVICIOS</a>
+                <a href="">CONTACTO</a>
+            </nav>
+
+        </header>
+        <section class="images">
+            <div class="images1">
+                <h3> Sprite01 </h3>
+            </div>
+            <div class="images2">
+                <h3> Sprite02 </h3>
+            </div>
+            <div class="images3">
+                <h3> Sprite03</h3>
+            </div>
+
+        </section>
+
+        <section class="text">
+            <div class="c1">
+                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, dolorum molestias dolorem vero quia
+                    fugit neque, eligendi pariatur eveniet excepturi autem error earum consequuntur ad consectetur
+                    velit! Nihil, saepe eius!</h2>
+            </div>
+            <div class="c2">
+                <h2>
+                    <h2></h2>
+                </h2>
+            </div>
+
+            <div class="c3">
+                <h2></h2>
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+    </main>
+</body>
+
+</html>
