@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        div.box {
+            background-color: #fff;
+            height: 200px;
+            width: 200px;
+            border: 2px solid #333;
+            margin: 0 auto;
+
+        }
+
+        div.box1 {
+            box-shadow: 0 0 12px #333;
+
+        }
+
+        div.box2 {
+            box-shadow: -10px -10px 24px 4px #333;
+
+        }
+
+        div.box3 {
+            box-shadow: 0 -4px 24px #333 inset;
+
+        }
+
+        div.box4 {
+            box-shadow: 4px 4px 3px 4px rgb(0, 181, 242),
+                8px 8px 3px 6px rgb(1, 100, 157),
+                12px 12px 3px 8px rgb(1, 46, 52);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html">⬅</a>Box Shadow</h1>
+        </header>
+        <section>
+            <h3>box-shadow: 0 0 12px #333</h3>
+            <div class="box box1"></div>
+            <h3>box-shadow: -10px -10px 24px 4px #333</h3>
+            <div class="box box2"></div>
+            <h3>box-shadow: 0 -4px 24px #333 inset</h3>
+            <div class="box box3"></div>
+            <h3>Multiples</h3>
+            <div class="box box4"></div>
+
+        </section>
+    </main>
+</body>
+
+</html>
