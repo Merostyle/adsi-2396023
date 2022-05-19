@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg Size</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        div.box {
+            background: url(/04-css3/imgs/tanjiro-kamado.jpg) #fffc no-repeat center;
+            border: 2px dotted #06bdffcc;
+            height: 200px;
+        }
+
+        div.box1 {
+            Background-size: contain;
+
+        }
+
+        div.box2 {
+            Background-size: cover;
+
+        }
+
+        div.box3 {
+            Background-size: 150%;
+
+        }
+
+        div.box4 {
+            Background-size: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html">⬅</a>Bg Size</h1>
+        </header>
+        <section>
+            <h3>Background-size: contain</h3>
+            <div class="box box1"></div>
+
+            <h3>Background-size: cover</h3>
+            <div class="box box2"></div>
+
+            <h3>Background-size: 150%</h3>
+            <div class="box box3"></div>
+
+            <h3>Background-size: 100px</h3>
+            <div class="box box4"></div>
+
+        </section>
+    </main>
+</body>
+
+</html>
