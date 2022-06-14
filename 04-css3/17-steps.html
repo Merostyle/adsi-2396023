@@ -1,32 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steps</title>
-    <link rel="stylesheet" href="css/master.css">
-</head>
-<style>
-    figure {
-        margin:  40px auto;
+    <title>STEPS</title>
+    <LINK rel="stylesheet" href="css/master.css">
+    <style>
+        figure {
+            margin: 40px auto
         }
-        
-</style>
+
+        figure.steps1 {
+            background: url(imgs/steps.png) no-repeat left;
+            border: 2px solid red;
+            width: calc(2000px / 10);
+            height: 509px;
+            animation: 1s animstep1 steps(10) infinite;
+        }
+
+        figure.steps2 {
+            background: url(imgs/steps2.png) no-repeat left;
+            border: 2px solid red;
+            width: calc(1900px / 10);
+            height: 240px;
+            animation: 1s animstep2 steps(10) infinite;
+        }
+
+        @keyframes animstep1 {
+            100% {
+                background-position: -2000px;
+            }
+        }
+
+        @keyframes animstep2 {
+            100% {
+                background-position: -1900px;
+            }
+        }
+    </style>
+</head>
 
 <body>
     <main>
         <header>
-            <h1><a href="index.html">⬅</a>Steps</h1>
+            <H1><a href="INDEX.HTML">⬅</a>STEPS</H1>
+
+
         </header>
         <section>
-            <figure>
-
-            </figure>
-
-        
-
+            <figure class="steps1"></figure>
+            <figure class="steps2"></figure>
         </section>
     </main>
 </body>
