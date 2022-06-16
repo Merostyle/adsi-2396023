@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Responsive</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        main {
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+
+        section.images {
+            padding: 13px;
+            justify-content: center;
+
+
+
+        }
+
+        section.images div {
+            display: inline-block;
+            background-size: cover;
+            background-position: center center;
+            height: 280px;
+            margin-right: 20px;
+            width: 280px;
+        }
+
+
+
+        section.images div:first-child {
+            margin-left: 30px;
+        }
+
+        section.images div:last-child {
+            margin-right: 0px;
+        }
+
+        .love:first-child {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)), url(/04-css3/imgs/nicolle4.jpg);
+        }
+
+        .love:nth-child(2) {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)), url(/04-css3/imgs/nicolle3.jpg);
+        }
+
+        .love:nth-child(3) {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)), url(/04-css3/imgs/nicolle2.jpg);
+        }
+
+        .love:nth-child(4) {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)), url(/04-css3/imgs/nicolle1.jpg);
+        }
+
+        section.images div p {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            bottom: -221px;
+            font-size: 1.45em;
+            height: 20px;
+            margin: -1px;
+            padding: 20px;
+            text-align: center;
+            width: 241px;
+            transition: all 0.5s;
+            position: relative;
+        }
+
+        section.images div:hover {
+            cursor: pointer;
+        }
+
+        section.images div:hover p {
+            height: 40px;
+        }
+
+        footer {
+            margin-top: 80px;
+        }
+
+        footer article.articulo1 {
+            border: 0.5px dashed rgba(0, 0, 0, 0.5);
+            height: 550px;
+            position: relative;
+            margin-top: -300px;
+
+
+        }
+
+
+
+        footer article.articulo1 figure {
+            background-position: right center;
+        }
+
+        footer article figure,
+        footer article div {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 1.3rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        footer article div {
+            margin-left: 60px;
+            width: 900px;
+            text-align: justify;
+            overflow: scroll;
+        }
+
+        footer article.articulo1 figure {
+            background-image: url(/04-css3/imgs/nicolle5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0px;
+            height: 270px;
+            width: 250px;
+        }
+
+
+        figure.title {
+            background: url(/04-css3/imgs/bgletr.jpg) no-repeat center top;
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            height: 400px;
+            font-size: 18rem;
+            font-weight: 800;
+            margin: 20px auto;
+            text-align: center;
+            text-transform: uppercase;
+            width: 80%;
+        }
+
+
+
+        footer article.articulo2 {
+            border: 0.5px dashed rgba(0, 0, 0, 0.5);
+            height: 550px;
+            position: relative;
+            margin-top: -10px;
+
+        }
+
+        footer article.articulo2 figure {
+            background-image: url(/04-css3/imgs/nicolle6.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0px;
+            height: 270px;
+            width: 250px;
+        }
+
+        @media (max-width:960px) {
+            main {
+                width: 250px;
+                margin: 0 auto;
+            }
+
+            header figure.title {
+                background-size: 200px;
+                background-position: cover;
+                height: 100px;
+                width: 300px;
+                padding: 2px;
+
+                font-size: 2rem;
+
+            }
+
+            section.images div:first-child {
+                margin-left: 0px;
+            }
+
+            section.images div {
+                background-size: cover;
+                position: relative;
+                background-position: center center;
+                height: 280px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <main>
+        <header>
+            <figure class="title">NICOLLE</figure>
+
+        </header>
+        <section class="images">
+            <div class="love">
+                <p>12/12/2021</p>
+
+            </div>
+            <div class="love">
+                <p>18/12/2021</p>
+
+            </div>
+            <div class="love">
+                <p>24/12/2021</p>
+
+            </div>
+            <div class="love">
+                <p> 06/01/2022</p>
+
+            </div>
+            <div class="love">
+
+            </div>
+
+        </section>
+        <footer>
+
+            <article class="articulo1">
+
+                <figure></figure>
+                <div class="text">
+                    <h2>MY SUN🌞</h2>
+                    Oye,
+                    Nunca creí o almenos no pensé que conocería a una persona que me hiciera Ami sentir de forma
+                    completa y muchos menos en
+                    tan poco tiempo, sin haber pasado tanto tiempo de habernos conocido , se conoce y se sabe que lo que
+                    importa no es el
+                    tiempo sino la conexión, falta mucho por recorrer (conocernos) pero diría yo que somos seres humanos
+                    y no somos
+                    perfectos, se que no serás perfecta y yo tampoco lo seré que habrán disgustos que sería bastante
+                    normal ya que es algo
+                    inevitable no somos Dioses, pero algo que yo se y tengo re presente Esque si el destino nos hizo
+                    conocer creería ya que
+                    es para alcanzar grandes cosas juntos, agradezco a Dios por darme la oportunidad de hacer parte de
+                    ti, repito aunque no
+                    somos perfectos (porque nos equivocamos y es normal) por como eres tú, tu forma de ser mis ojos
+                    reflejan en ti la mujer
+                    perfecta, te mereces lo mejor de todo este universo.✨
+                    Nuevamente muchas gracias por existir y por actuar como en verdad tu eres , ya que al ser tu misma
+                    mis ojos, cerebro ,
+                    corazón vieron y sintieron que tú eres la mujer que en verdad yo QUIERO en mi vida, terminar este
+                    año con poderte
+                    conocer fue lo mejor que me pasó en todo el año completo, de los 365 Días que hay en un año,♥️🖤
+                    TU en 10 días me hiciste sentir completó en conclusión prefiero mil veces vivir y convivir contigo
+                    10 días en cambio de
+                    365 días sin tí.
+                    Evidentemente estar soltero no esta mal, pero prefiero mil veces tener la compresión y ternura de
+                    alguien firmé y
+                    estable que envés de estar en fiesta cada fin de semana sin mérito alguno.🔥👑
+                    Y mucho más si esa compresión y ternura que uno recibe es de alguien que a uno le gusta bastante
+                    tanto físicamente y
+                    moralmente, que en este caso Señorita Nicolle Narváez Noreña esa personita eres tú , muchas gracias
+                    por hacerme sentir
+                    tan bien y completo eres lo mejor que me pasó en este año.🥰
+                </div>
+        </footer>
+        </article>
+        <footer>
+
+            <article class="articulo2">
+
+                <figure></figure>
+                <div class="text">
+                    <h2> MY STARS✨</h2>
+                    Amor yo la verdad soy muy sincero y directo y digo las cosas como son, tu eres una mujer muy parada,
+                    muy fina, muy
+                    chimba, muy stylosa , muy coherente muy hermosa, a pesar de tu edad (y no quiero decir que seas
+                    menor) pero para tener
+                    15 años eres una mujer ya muy avanzada en todos los sentidos posibles , nunca había conocido una
+                    mujer tan llena de
+                    cosas buenas y muy llena de dones.☀️✨
+
+                    El amor que has generado en mi es bastante inmenso demasiado inmenso que si esto generará una
+                    energía, sin duda haría un
+                    corto circuito en toda la ciudad de tanta energía de la requerida.☀️✨
+
+                    Espero que mi alma nunca se separe de la tuya, que mi ojos no deje de ver lo dulces y hermosos que
+                    son los tuyos que
+                    cada día que los miro reflejó una mujer bastante completa y amorosa, que mis labios no dejen de
+                    tocar los tuyos ya que
+                    al momento que lo hago todo dentro de mi hace como si fuera una fiesta , ya que me generas bastante
+                    satisfacción y
+                    dulcedad, que mis manos no deje de sentir tu cuerpo, ya que tú divino templo es la razon de yo tener
+                    una atracción
+                    física, de tu ser sin duda la mujer más hermosa del mundo mamasita preciosaaaa y por último que mi
+                    mente nunca se pierda
+                    con el tuyo _porque la conexión que tenemos fue la que siempre quise tener, ya que tú eres la mujer
+                    con la esencia y
+                    presencia más asombrosa y maravillosa que pude haber conocido, tu forma de ser nunca lo cambiaría
+                    por nada ni nadie y
+                    que desde el primer día me di cuenta que TU eras la elegida para mí, Sentí el famoso click cuando te
+                    Vi por primera vez
+                    .
+                    Gracias por responderme el famoso mensaje " Severas cejas" ya que sino fuera por eso yo no estaría
+                    aquí compartiendo con
+                    la mejor.☀️✨
+                    Te amo mi sol y mis estrellas hoy más que nunca me siento más enamorado de ti ♥️
+
+                </div>
+        </footer>
+        </article>
+
+
+
+
+
+
+    </main>
+</body>
+
+</html>
