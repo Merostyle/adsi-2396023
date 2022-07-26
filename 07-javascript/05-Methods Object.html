@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods Object</title>
+    <link rel="stylesheet" href="/07-javascript/css/menu.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                      </svg>
+                </a>
+                Methods Object
+                
+            </h1>
+            
+        </header>
+        <section>
+            <h2 class="title"></h2>
+            <img src=""  class="image">
+            <nav class="controls">
+                <figure class="food"></figure>
+                <figure class="stone"></figure>
+            </nav>
+            <ul class="moves"></ul>
+
+        </section>
+    </main>
+    <script>
+        // elements
+        const title = document.querySelector('.title')
+        const image = document.querySelector('.image')
+        const moves = document.querySelector('.moves')
+
+        // Object
+        const pokemon ={
+            // Attributes
+            name: 'Bulbasaur',
+            type: 'Grass',
+            hp: 50,
+            image: 'http://www.serebii.net/swordshield/pokemon/small/001.png',
+
+            // methods
+
+            feed: function() {
+                this.hp += 10
+            },
+            attack: function() {
+                if(this.hp <= 0) {
+                    return this.name + 'is Dead!'
+                } else { 
+                    this.hp -= 10
+                }
+            }
+        }
+        title.innerHTML = ` ${pokemon.name} (${pokemon.type}) `
+        image.setAttribute('src', pokemon.image)
+
+    </script>
+    
+</body>
+</html>
