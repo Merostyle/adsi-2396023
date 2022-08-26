@@ -7,12 +7,78 @@
     <title>Class Vehicle</title>
     <link rel="stylesheet" href="/07-javascript/css/menu.css">
     <style>
+        main.dark {
+            background: url(images/bg_dark.svg) no-repeat center;
+        }
+        main.dark section button.btn_mode {
+            background: url(images/bg/light.svg) no-repeat center;
+        }
+          main.dark header h1 a:is(:link,:visited:focus),
+        main.dark header h1,
+        main.dark h2,
+        main.dark  {
+            color: #ffffff;
+        }
+        
+        main.dark div.attributes div.brand {
+            background: url(images/bg/brand_light.svg) no-repeat center;
+        }
+        main.dark div.attributes div.refer {
+            background: url(images/bg/reference_light.svg) no-repeat center;
+        }
+        main.dark div.attributes div.model {
+            background: url(images/bg/model_light.svg) no-repeat center;
+        }
+        main.dark div.attributes div.color {
+            background: url(images/bg/color_light.svg) no-repeat center;
+        }
+        main.dark figure.landscape {
+            background: url(images/bg/fondo-light.svg) no-repeat center;
+        }
+        main.dark figure.landscape button.prev {
+            background: url(images/bg/PREV.svg) no-repeat center;
+        }
+        main.dark figure.landscape button.next {
+            background: url(images/bg/NEXT.svg) no-repeat center;
+        }
+        main.dark div.methods button.on {
+            background: url(images/bg/ON.svg) no-repeat center;
+        }
+        main.dark div.methods button.fw {
+            background: url(images/bg/FW.svg) no-repeat center;
+        }
+        main.dark div.methods button.stop {
+            background: url(images/bg/STOP.svg) no-repeat center;
+        }
+        main.dark div.methods button.bw {
+            background: url(images/bg/BW.svg) no-repeat center;
+        }
+        main.dark div.methods button.off {
+            background: url(images/bg/OFF.svg) no-repeat center;
+        }
+        main.dark div.methods button.on.active {
+            background: url(images/bg/ON.svg) no-repeat center;
+        }
+        main.dark div.methods button.fw.active {
+            background: url(images/bg/FW.svg) no-repeat center;
+        }
+        main.dark div.methods button.stop.active {
+            background: url(images/bg/STOP.svg) no-repeat center;
+        }
+        main.dark div.methods button.bw.active {
+            background: url(images/bg/BW.svg) no-repeat center;
+        }
+        main.dark div.methods button.off.active {
+            background: url(images/bg/OFF.svg) no-repeat center;
+        }
 
+        /* Light Mode */
         main {
             
             background: url(images/bg/Frame\ 2.svg) no-repeat center;
             border: 4px solid rgb(0, 0, 0);
             width: 390px;
+            transition: all 0.4s ease-in;
 
         }
         
@@ -28,12 +94,13 @@
         section {
             position: relative;
         }
-        section button.dark {
+        section button.btn_mode {
             background: url(/07-javascript/images/dark.svg)no-repeat;
             border: none;
+            cursor: pointer;
             height: 66px;
             position: absolute;
-            top: -88px;
+            top: -72px;
             right: 20px;
             width: 62px;
             transition: transform 0.2s ease-in;
@@ -44,7 +111,7 @@
 
         header h1 a:is(:link,:visited:focus),
         header h1 {
-            color: #4f6d7a;
+            color: #000000;
         }
         header h1 small {
             font-weight: 200;
@@ -53,7 +120,7 @@
             position: relative;
         }
         section button.btn__dark {
-            background: url(images/vehicle/btn-dark.svg) no-repeat center;
+            background: url(images/bg/fondo.svg) no-repeat center;
             border: none;
             cursor: pointer;
             height: 66px;
@@ -84,7 +151,7 @@
             top: 444px;
         }
         div.attributes {
-            color: #4f6d7a;
+            color: #000000;
             font-weight: 300;
             font-size: 14px;
             margin: 14px auto;
@@ -113,7 +180,7 @@
             background: url(images/Color.svg) no-repeat center;
         }
         figure.landscape {
-            background-color: #fff5;
+            background: url(images/bg/fondo.svg) no-repeat center;
             border-radius: 6px;
             display: flex;
             justify-content: space-between;
@@ -141,6 +208,12 @@
         figure.landscape button.next {
             background: url(images/nextttttt.svg) no-repeat center;
         }
+        figure.landscape img.car {
+            
+            position: relative;
+            bottom: -79px;
+            width: 165px;
+        }
         div.methods {
             margin: 20px auto 0 auto;
             display: flex;
@@ -154,6 +227,8 @@
             height: 66px;
             width: 62px;
             transition: transform 0.2s ease-in;
+            
+            
         }
         div.methods button:is(:hover) {
             transform: scale(0.9);
@@ -189,6 +264,42 @@
         div.methods button.off.active {
             background: url(images/offfffff.svg) no-repeat center;
         }
+        div.methods button.on.active {
+            background: url(images/vehicle/btn-on-act.svg) no-repeat center;
+        }
+        div.methods button.fw.active {
+            background: url(images/vehicle/btn-fw-act.svg) no-repeat center;
+        }
+        div.methods button.stop.active {
+            background: url(images/vehicle/btn-stop-act.svg) no-repeat center;
+        }
+        div.methods button.bw.active {
+            background: url(images/vehicle/btn-bw-act.svg) no-repeat center;
+        }
+        div.methods button.off.active {
+            background: url(images/vehicle/btn-off-act.svg) no-repeat center;
+        }
+        main.animate {
+            animation: animMain 0.2s ease-in 1;
+        }
+        @keyframes animMain {
+            0%  { 
+                transform: scale(1);
+            }
+            50%  { 
+                transform: scale(0.9);
+            }
+            100% { 
+                transform: scale(1);
+            }
+        }
+        img.car.on {
+             animation: animCar 0.1s linear infinite;
+        }
+        @keyframes animCar {
+            0%, 100% { transform: translateY(0); }
+            5%       { transform: translateY(-4px); }
+        }
     </style>
 </head>
 <body>
@@ -204,7 +315,7 @@
             </h1>
         </header>
         <section>
-            <button class="dark"></button>
+            <button class="btn_mode"></button>
             <h2 class="subtitle1">Attributes:</h2>
             <div class="attributes">
                 <div class="brand"></div>
@@ -214,6 +325,7 @@
             </div>
             <figure class="landscape">
                 <button class="prev"></button>
+                <img src="" class="car">
                 <button class="next"></button>
             </figure>
             <h2 class="subtitle2">Methods:</h2>
@@ -227,7 +339,10 @@
         </section>
     </main>
     <script>
-          const btn_on   = document.querySelector('.on')
+           const main     = document.querySelector('main')
+        const btn_mode = document.querySelector('.btn_mode')
+
+        const btn_on   = document.querySelector('.on')
         const btn_fw   = document.querySelector('.fw')
         const btn_stop = document.querySelector('.stop')
         const btn_bw   = document.querySelector('.bw')
@@ -238,25 +353,31 @@
         const e_refer  = document.querySelector('.refer') 
         const e_model  = document.querySelector('.model') 
         const e_color  = document.querySelector('.color')  
+        const e_image  = document.querySelector('.car')  
+
         var index_attr = 0
 
         const btn_prev = document.querySelector('.prev')
         const btn_next = document.querySelector('.next')
 
+        // Logic 
+        var engine = false
+
+
         const vehicles = [
                 { 
-                    brand: 'Toyota',  
-                    refer: 'Yaris',  
-                    model: 2020, 
-                    color: 'Orange', 
-                    image: 'images/vehicle/car01.png' 
+                    brand: 'Volkswagen',  
+                    refer: 'Beetle',  
+                    model: 2003, 
+                    color: 'Blue', 
+                    image: 'images/bg/car.png'
                 },
                 { 
-                    brand: 'Renault', 
-                    refer: 'Clio',   
-                    model: 2018, 
-                    color: 'Green',  
-                    image: 'images/vehicle/car02.png' 
+                    brand: 'Bmw', 
+                    refer: 'Coupe',   
+                    model: 2022, 
+                    color: 'white',  
+                    image: 'images/bg/car01.png' 
                 },
                 { 
                     brand: 'Ford',    
@@ -273,31 +394,7 @@
                     image: 'images/vehicle/car04.png' 
                 }
         ]
-    
-    
-    class Vehicle {
-        constructor(brand,refer,model,color,image){
-            this.brand = brand
-            this.refer = refer
-            this.model = model
-            this.color = color
-            this.image = image
-        }
-        getInfo() {
-            return `The brand is: ${this.brand}`
-        }
-    }
-    const vh = new Vehicle(vehicles[0].brand,
-                           vehicles[0].refer,
-                           vehicles[0].model,
-                           vehicles[0].color,
-                           vehicles[0].brand,
-                           vehicles[0].image)                      
-    console.log(vh)
-    console.log(vh.getInfo())      
-    
-    
-    class Vehicle {
+        class Vehicle {
             constructor(brand, refer, model, color, image) {
                 this.brand = brand
                 this.refer = refer
@@ -311,11 +408,30 @@
                 e_refer.textContent = this.refer
                 e_model.textContent = this.model
                 e_color.textContent = this.color
+                e_image.setAttribute('src', this.image)
+            }
+            static startEngine() {
+                if (!engine) {
+                    e_image.classList.add('on')
+                    engine = true
+                }
+            }
+            static offEngine() {
+                if(engine) {
+                    e_image.classList.remove('on')
+                    engine = false
+                }
             }
         }
-
-    btn_on.addEventListener('click', (event) => {
+        // Actions
+        btn_mode.addEventListener('click', e=> {
+            e.preventDefault()
+            e.stopPropagation()
+            main.classList.toggle('dark')
+        })
+        btn_on.addEventListener('click', (event) => {
             removeActives()
+            Vehicle.startEngine()
             btn_on.classList.add('active')
         })
         btn_fw.addEventListener('click', (event) => {
@@ -332,21 +448,31 @@
         })
         btn_off.addEventListener('click', (event) => {
             removeActives()
+            Vehicle.offEngine()
             btn_off.classList.add('active')
         })
         btn_prev.addEventListener('click', (event) => {
             if (index_attr > 0) {
                 index_attr--
+                animateMain()
                 showAttributes()
             }
         })
         btn_next.addEventListener('click', (event) => {
             if (index_attr < vehicles.length-1) {
                 index_attr++
+                animateMain()
                 showAttributes()
             }
         })
         // Functions
+        function animateMain() {
+            main.classList.add('animate')
+            setTimeout(() => {
+                main.classList.remove('animate')
+            }, 500)
+        }
+
         function removeActives() {
             btns_methods.forEach(element => {
                 element.classList.remove('active')
@@ -364,7 +490,7 @@
         }
         showAttributes()
         //console.log(vh)
-        //console.log(vh.getInfo())                      
+        //console.log(vh.getInfo())                    
     </script>
     
 </body>
