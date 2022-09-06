@@ -86,6 +86,7 @@
         header h1 a:is(:link,:visited),
         header h1  {
             color: rgb(0, 0, 0);
+            
         }
         header h1 small {
             font-weight: 200;
@@ -229,6 +230,7 @@
             transition: transform 0.2s ease-in;
             
             
+            
         }
         div.methods button:is(:hover) {
             transform: scale(0.9);
@@ -282,6 +284,14 @@
         main.animate {
             animation: animMain 0.2s ease-in 1;
         }
+        figure.parallax {
+            border: 1px solid #ff0000;
+            position: absolute;
+            height: 2px;
+            width: 350px;
+            left: -16px;
+            top: 200px;
+        }
         @keyframes animMain {
             0%  { 
                 transform: scale(1);
@@ -323,6 +333,11 @@
                 <div class="model"></div>
                 <div class="color"></div>
             </div>
+            <figure class="parallax">
+                <div class="layer1"></div>
+                <div class="layer2"></div>
+                <div class="layer3"></div>
+            </figure>
             <figure class="landscape">
                 <button class="prev"></button>
                 <img src="" class="car">
@@ -383,16 +398,10 @@
                     brand: 'Ford',    
                     refer: 'Fiesta', 
                     model: 2016, 
-                    color: 'Blue',   
-                    image: 'images/vehicle/car03.png' 
-                },
-                { 
-                    brand: 'Fiat',    
-                    refer: '500',    
-                    model: 2007, 
-                    color: 'Red',    
-                    image: 'images/vehicle/car04.png' 
+                    color: 'coffee',   
+                    image: '/07-javascript/images/vehicle_car.png' 
                 }
+                
         ]
         class Vehicle {
             constructor(brand, refer, model, color, image) {
@@ -495,3 +504,14 @@
     
 </body>
 </html>
+
+1- azul
+2- true
+3- rojo
+4-amarillo
+5-azul
+6-verde
+7- 4-amarillo
+8- true (azul)
+9 - azul
+10-amarillo
