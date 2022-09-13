@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Calc</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        main {
+            background: url(/07-javascript/images/challenge-09/background_dark.svg) no-repeat center;
+        }
+        header h1 a:is(:link) {
+            color: #cbcddb;
+            margin-top: 200px;
+            position: absolute;
+            left: 120px;
+        }
+        header button.mode {
+            border: none;
+            background: url(/07-javascript/images/challenge-09/mode.svg) no-repeat center;
+            height: 40px;
+            display: block;
+            margin:1px;
+            transition: all 0.2s ease-in;
+            width: 400px;
+            position: relative;
+            left: 150px;
+            bottom: -40px;
+        }
+        header button.mode:is(:hover, :focus) {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+        div.display {
+            background: url(/07-javascript/images/challenge-09/display.svg);
+            display: flex;
+            flex-direction: column;
+            margin: 30px 120px;
+            text-align: right;
+            height: 60px;
+            
+           
+        }
+        button.cero {
+            width: 100px;
+
+        }
+        button.punt {
+            position: relative;
+            left: 50px;
+            margin-top:-7px;
+        }
+        button.igual {
+            position: relative;
+            left: 50px;
+            margin-top:-7px;
+        }
+        div.display output.operation {
+           position: relative;
+            font-size: 24px;
+            color: #6E768A;
+            bottom: -20px;
+        }
+        div.display output.result {
+            position: relative;
+            font-size: 34px;
+            color: #B6B9C7;
+            bottom: -20px;
+        }
+        div.buttons  {
+            position: static;
+            display: grid;
+            gap: -1px;
+            margin-top: 40px;
+            justify-content: center;
+            grid-template-columns: repeat(4, 50px);
+            grid-template-rows: repeat(5, 50px);
+        }
+        div.buttons button {
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease-in;
+        }
+        div.buttons button.clear {
+            background: url(/07-javascript/images/challenge-09/clear.svg) no-repeat center;
+        }
+        div.buttons button.back {
+            background: url(/07-javascript/images/challenge-09/back.svg) no-repeat center;
+        }
+        div.buttons button.pow {
+            background: url(/07-javascript/images/challenge-09/pow.svg) no-repeat center;
+        }
+        div.buttons button.div {
+            background: url( /07-javascript/images/challenge-09/div.svg) no-repeat center;
+        }
+        div.buttons button:is(:hover, :focus) {
+            transform: scale(1.1);
+        }
+        div.buttons button.seven {
+            background: url(/07-javascript/images/challenge-09/seven.svg) no-repeat center;
+        }
+        div.buttons button.eight {
+            background: url(/07-javascript/images/challenge-09/eight.svg) no-repeat center;
+        }
+        div.buttons button.nine {
+            background: url(/07-javascript/images/challenge-09/nine.svg) no-repeat center;
+        }
+        div.buttons button.multiplication{
+            background: url(/07-javascript/images/challenge-09/multiplication.svg) no-repeat center;
+        }
+        div.buttons button.four {
+            background: url(/07-javascript/images/challenge-09/four.svg) no-repeat center;
+        }
+        div.buttons button.five {
+            background: url(/07-javascript/images/challenge-09/five.svg) no-repeat center;
+        }
+
+        div.buttons button.six {
+            background: url(/07-javascript/images/challenge-09/six.svg) no-repeat center;
+        }
+        div.buttons button.rest {
+            background: url(/07-javascript/images/challenge-09/rest.svg) no-repeat center;
+        }
+        div.buttons button.one {
+            background: url(/07-javascript/images/challenge-09/one.svg) no-repeat center;
+        }
+        div.buttons button.two {
+            background: url(/07-javascript/images/challenge-09/two.svg) no-repeat center;
+        }
+        div.buttons button.thre {
+            background: url(/07-javascript/images/challenge-09/thre.svg ) no-repeat center;
+        }
+        div.buttons button.sum {
+            background: url(/07-javascript/images/challenge-09/sum.svg ) no-repeat center;
+        }
+        div.buttons button.cero {
+            background: url(/07-javascript/images/challenge-09/cero.svg ) no-repeat center;
+        }
+        div.buttons button.punt {
+            background: url(/07-javascript/images/challenge-09/punt.svg ) no-repeat center;
+        }
+        div.buttons button.igual {
+            background: url(/07-javascript/images/challenge-09/igual.svg ) no-repeat center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </h1>
+            <button class="mode"></button>
+        </header>
+        <section>
+            <div class="display">
+                <output class="operation"></output>
+                <output class="result"></output>
+            </div>
+            <div class="buttons">
+                <button class="clear"></button>
+                <button class="back"></button>
+                <button class="pow"></button>
+                <button class="div" data-opr="/"></button>
+                <button class="seven" data-num="7"></button>
+                <button class="eight" data-num="8"></button>
+                <button class="nine" data-num="9"></button>
+                <button class="multiplication" data-opr="*"></button>
+                <button class="four" data-num="4"></button>
+                <button class="five" data-num="5"></button>
+                <button class="six" data-num="6"></button>
+                <button class="rest" data-opr="-" ></button>
+                <button class="one" data-num="1" ></button>
+                <button class="two" data-num="2"></button>
+                <button class="thre" data-num="3"></button>
+                <button class="sum"  data-opr="+"></button>
+                <button class="cero" data-num="0"></button>
+                <button class="punt"></button>
+                <button class="igual"></button>
+                
+                
+            </div>
+        </section>
+    </main>
+    <script>
+        const mode = document.querySelector('.mode')
+        const main = document.querySelector('main')
+        const opert = document.querySelector('.operation')
+        const limpiar = document.querySelector('.clear')
+        // Numbers & Operators
+        const nums = document.querySelectorAll("button[data-num]")
+        const operts = document.querySelectorAll("button[data-opr]")
+
+        var operStatus = false
+        
+
+        nums.forEach(element => {
+            element.addEventListener('click', () => {
+                opert.textContent += element.getAttribute('data-num')
+            })
+        });
+
+        operts.forEach(element => {
+            element.addEventListener('click', ()=> {
+                opert.textContent += element.getAttribute('data-opr')
+            })
+
+        });
+
+        limpiar.addEventListener('click', ()=> {
+            opert.textContent =''
+        })
+        
+        mode.addEventListener('click', ()=> {
+            main.classList.toggle('light')
+        })
+
+    </script>
+</body>
+</html>
