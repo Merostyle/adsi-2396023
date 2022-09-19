@@ -7,6 +7,13 @@
     <title>Challenge Calc</title>
     <link rel="stylesheet" href="css/menu.css">
     <style>
+
+
+
+
+
+
+
         main {
             background: url(/07-javascript/images/challenge-09/background_dark.svg) no-repeat center;
         }
@@ -97,38 +104,38 @@
         div.buttons button:is(:hover, :focus) {
             transform: scale(1.1);
         }
-        div.buttons button.seven {
+        div.buttons button.n7 {
             background: url(/07-javascript/images/challenge-09/seven.svg) no-repeat center;
         }
-        div.buttons button.eight {
+        div.buttons button.n8 {
             background: url(/07-javascript/images/challenge-09/eight.svg) no-repeat center;
         }
-        div.buttons button.nine {
+        div.buttons button.n9 {
             background: url(/07-javascript/images/challenge-09/nine.svg) no-repeat center;
         }
-        div.buttons button.multiplication{
+        div.buttons button.mul{
             background: url(/07-javascript/images/challenge-09/multiplication.svg) no-repeat center;
         }
-        div.buttons button.four {
+        div.buttons button.n4 {
             background: url(/07-javascript/images/challenge-09/four.svg) no-repeat center;
         }
-        div.buttons button.five {
+        div.buttons button.n5 {
             background: url(/07-javascript/images/challenge-09/five.svg) no-repeat center;
         }
 
-        div.buttons button.six {
+        div.buttons button.n6 {
             background: url(/07-javascript/images/challenge-09/six.svg) no-repeat center;
         }
-        div.buttons button.rest {
+        div.buttons button.res {
             background: url(/07-javascript/images/challenge-09/rest.svg) no-repeat center;
         }
-        div.buttons button.one {
+        div.buttons button.n1 {
             background: url(/07-javascript/images/challenge-09/one.svg) no-repeat center;
         }
-        div.buttons button.two {
+        div.buttons button.n2 {
             background: url(/07-javascript/images/challenge-09/two.svg) no-repeat center;
         }
-        div.buttons button.thre {
+        div.buttons button.n3 {
             background: url(/07-javascript/images/challenge-09/thre.svg ) no-repeat center;
         }
         div.buttons button.sum {
@@ -136,11 +143,12 @@
         }
         div.buttons button.cero {
             background: url(/07-javascript/images/challenge-09/cero.svg ) no-repeat center;
+            grid-column-end:span 2;
         }
-        div.buttons button.punt {
+        div.buttons button.punto {
             background: url(/07-javascript/images/challenge-09/punt.svg ) no-repeat center;
         }
-        div.buttons button.igual {
+        div.buttons button.igu {
             background: url(/07-javascript/images/challenge-09/igual.svg ) no-repeat center;
         }
     </style>
@@ -165,61 +173,143 @@
             <div class="buttons">
                 <button class="clear"></button>
                 <button class="back"></button>
-                <button class="pow"></button>
-                <button class="div" data-opr="/"></button>
-                <button class="seven" data-num="7"></button>
-                <button class="eight" data-num="8"></button>
-                <button class="nine" data-num="9"></button>
-                <button class="multiplication" data-opr="*"></button>
-                <button class="four" data-num="4"></button>
-                <button class="five" data-num="5"></button>
-                <button class="six" data-num="6"></button>
-                <button class="rest" data-opr="-" ></button>
-                <button class="one" data-num="1" ></button>
-                <button class="two" data-num="2"></button>
-                <button class="thre" data-num="3"></button>
+                <button class="pow"  data-opr="**"></button>
+                <button class="div"  data-opr="/"></button>
+                <button class="n7"   data-num="7"></button>
+                <button class="n8"   data-num="8"></button>
+                <button class="n9"   data-num="9"></button>
+                <button class="mul"  data-opr="*"></button>
+                <button class="n4"   data-num="4"></button>
+                <button class="n5"   data-num="5"></button>
+                <button class="n6"   data-num="6"></button>
+                <button class="res"  data-opr="-"></button>
+                <button class="n1"   data-num="1"></button>
+                <button class="n2"   data-num="2"></button>
+                <button class="n3"   data-num="3"></button>
                 <button class="sum"  data-opr="+"></button>
                 <button class="cero" data-num="0"></button>
-                <button class="punt"></button>
-                <button class="igual"></button>
-                
-                
+                <button class="punto"data-opr="."></button>
+                <button class="igu"data-opr=""></button>
             </div>
         </section>
     </main>
     <script>
+        //elementos
         const mode = document.querySelector('.mode')
         const main = document.querySelector('main')
-        const opert = document.querySelector('.operation')
-        const limpiar = document.querySelector('.clear')
-        // Numbers & Operators
+        const oper = document.querySelector('.operation')
+        const clear = document.querySelector('.clear')
+        const back = document.querySelector('.back')
+        const result = document.querySelector('.igu')
+        //numeros y operadores
         const nums = document.querySelectorAll("button[data-num]")
-        const operts = document.querySelectorAll("button[data-opr]")
-
+        const oprs = document.querySelectorAll("button[data-opr]")
+        //operacion logica
         var operStatus = false
-        
-
+        //click button
         nums.forEach(element => {
-            element.addEventListener('click', () => {
-                opert.textContent += element.getAttribute('data-num')
+            element.addEventListener('click',()=>{
+                if(oper.textContent.length < 18){
+                   oper.textContent += element.getAttribute('data-num')  
+                   operStatus = true    
+             }
             })
         });
-
-        operts.forEach(element => {
-            element.addEventListener('click', ()=> {
-                opert.textContent += element.getAttribute('data-opr')
-            })
-
+        oprs.forEach(element => {
+            element.addEventListener('click',()=>{
+                if(oper.textContent.length < 18){
+                    if(operStatus){
+                       oper.textContent += element.getAttribute('data-opr')}  
+                       operStatus = false
+                    }
+    })
         });
-
-        limpiar.addEventListener('click', ()=> {
-            opert.textContent =''
+        clear.addEventListener('click',()=>{
+            oper.textContent='';
         })
-        
-        mode.addEventListener('click', ()=> {
+        mode.addEventListener('click',(e) =>{
             main.classList.toggle('light')
+        })
+        back.addEventListener('click',() =>{
+            oper.textContent = oper.textContent.slice(0,-1)
+            if(isNaN(oper.textContent.slice(-1))){
+                operStatus=false
+            }
+        })
+        result.addEventListener('click',()=>{
+            showResult()
+
+        })
+        function showResult(){
+            oper.value = eval (oper.value)
+        }
+       
+        document.addEventListener('keyup',(evt) => {
+          console.log(evt.keyCode)
+            switch (evt.keyCode){
+                case 96:
+                case 48:
+                    oper.textContent += 0
+                    break;
+                case 97:
+                case 49:
+                    oper.textContent += 1
+                    break;
+                case 98:
+                case 50:
+                    oper.textContent += 2
+                    break;
+                case 99:
+                case 51:
+                    oper.textContent += 3
+                    break;
+                case 100:
+                case 53:
+                    oper.textContent += 4
+                    break;
+                case 101:
+                case 52:
+                    oper.textContent += 5
+                    break;
+                case 102:
+                case 54:
+                    oper.textContent += 6
+                    break;
+                case 103:
+                case 55:
+                    oper.textContent += 7
+                    break;
+                case 104:
+                case 56:
+                    oper.textContent += 8
+                    break;
+                case 105:
+                case 57:
+                    oper.textContent += 9
+                    break;
+                    case 105:
+                case 106:
+                    oper.textContent += '*'
+                    break;
+                case 111:
+                    oper.textContent += '/'
+                    break;  
+                case 109:
+                    oper.textContent += '-'
+                    break; 
+                case 107:
+                    oper.textContent += '+'
+                    break; 
+                case 13:
+                    showResult()
+                    break; 
+                default:
+                break;
+          }
         })
 
     </script>
+
+    
 </body>
 </html>
