@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty API Rest</title>
+    <style>
+    ul.characters {
+        display:  grid;
+        grid-template-columns: repeat(4, 1fr);
+    
+        text-align: center;
+        column-gap: 2%;
+        
+    } 
+    body {
+        background-color: black;
+        
+    }
+    h2{
+        background-color: azure ;
+        color: rgb(0, 102, 102);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 250px;
+        margin: auto;
+        position: relative;
+        margin-top: -10px;
+        
+    }
+    h4 {
+        color: white;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        position: relative;
+        margin-top: 10px;
+    }
+    li {
+        border: 2px solid white;
+        border-radius: 60%;
+        margin-top: 30px;
+        position: relative  ;
+         }
+         .characters img {
+            
+
+            width: 250px;
+            border-radius: 70%;
+            
+            
+            
+         }
+
+        
+        
+       
+    
+    
+    
+    </style>
+</head>
+<body>
+    <ul class="characters"></ul>
+
+    <script>
+        const characters = document.querySelector('.characters')
+
+        async function getCharacters() {
+            for (let i = 1; i < 49; i++) {
+           let resp = await fetch('https://rickandmortyapi.com/api/character/' + i)
+            let char = await resp.json()
+            console.log(char)
+            characters.innerHTML += `<li> 
+                <figure>
+                <img src="${char.image}">
+                </figure>
+                <h2> ${char.id} :    
+                        ${char.name}</h2>
+                <h4> Gender:  ${char.gender}</h4>
+                <h4> Status:    ${char.status}</h4>
+                <h4> Especie:  ${char.species}</h4>
+                
+                
+               
+                </li>`
+                if (i == 49) {
+                    addCliksEvents ()
+                } 
+            }
+        }
+        function addCliksEvents(){
+            const btnShows = document.querySelectorAll('.btnShow')
+        }
+
+        getCharacters()
+    </script>
+</body>
+</html>
