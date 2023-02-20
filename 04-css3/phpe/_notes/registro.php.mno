@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_registrod" value="name:documento;datatype:int,name:nombre;datatype:string,name:apellidos;datatype:string,name:correo;datatype:string,name:celular;datatype:int,name:tel_acudiente;datatype:int,name:grado;datatype:string" />
+	<infoitem key="UD_Recordset1" value="name:documento;datatype:int,name:nombre;datatype:string,name:apellidos;datatype:string,name:correo;datatype:string,name:celular;datatype:int,name:tel_acudiente;datatype:int,name:grado;datatype:string" />
+</info>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_login_e" value="name:Documento;datatype:string,name:Nombre;datatype:string,name:Apellidos;datatype:string,name:Correo;datatype:string,name:Celular;datatype:string" />
+</info>
